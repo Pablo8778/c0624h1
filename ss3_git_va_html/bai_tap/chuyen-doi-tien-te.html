@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        input, button {
+            display: flex;
+            margin: 10px 10px 10px 1px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Chuyển đổi tiền tệ</h1>
+    <div style="display: inline-block;"><label for="amount">Số tiền:</label>
+    <input type="number" id="amount" placeholder="Nhập số tiền"></div>
+    
+    <div style="display: inline-block;"><label for="currency">Chuyển đổi từ:</label>
+    <select id="currency">
+        <option value="vnd">VND</option>
+        <option value="usd">USD</option>
+    </select>
+    </div>
+
+    <div style="display:inline-block;"><select id="currency">
+        <option value="usd">USD</option>
+        <option value="vnd">VND</option>
+    </select>
+    </div>
+    <div style="display:inline-block;"><button onclick="convertCurrency()">Chuyển đổi</button>
+    </div>
+    <h1 id="result"></h1>
+    
+    <script>
+        function convertCurrency() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const currency = document.getElementById('currency').value;
+            const exchangeRate = 23000; // Tỷ giá hối đoái 1 USD = 23,000 VND
+            
+            let result;
+            
+            if (currency === 'vnd') {
+                result = amount / exchangeRate;
+                document.getElementById('result').innerText = `${amount} VND = ${result.toFixed(2)} USD`;
+            } else if (currency === 'usd') {
+                result = amount * exchangeRate;
+                document.getElementById('result').innerText = `${amount} USD = ${result.toFixed(2)} VND`;
+            } else {
+                document.getElementById('result').innerText = 'Lỗi: Vui lòng chọn loại tiền tệ hợp lệ';
+            }
+        }
+    </script>
+</body>
+</html>
