@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm số dương lớn nhất</title>
+   
+<body>
+    <h3>Tìm số dương lớn nhất trong dãy số</h3>
+    <button onclick="findPositiveEvenNumber()">Tìm số dương lớn nhất</button>
+    <p id="result"></p>
+</body>
+
+
+    <script>
+        function findPositiveEvenNumber() {
+            const arr = [-9, -7, -4, -2, 0, 1, 2, 4, 7, 9, 10];
+            let largestPositive = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > 0) {
+                    if (largestPositive === 0 || arr[i] > largestPositive) {
+                        largestPositive = arr[i];
+                    }
+                }
+            }
+            document.getElementById('result').innerText = 'Số dương lớn nhất là: ' + largestPositive;
+        }
+    </script>
+</head>
+
+</html>
