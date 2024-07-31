@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function inputArrayCars() {
+			const soLuongXe = parseInt(prompt("Nhập Số Lượng Xe Hơi"));
+			const danhSachXeHoi = [];
+		for(i = 0; i < soLuongXe; i ++){
+			const xeHoi = {
+				HangSX: prompt(`Nhập Hãng Sản Xuất Cho Xe:${i + 1}`),
+				Color: prompt(`Nhập Màu Cho Xe: ${i + 1}`),
+				YearofManufacture: parseInt(prompt(`Nhập Năm Sản Xuất Cho Xe`)),
+				Price:parseFloat(prompt(`Nhập Giá Xe Hơi:${i + 1}`))
+			};
+			danhSachXeHoi.push(xeHoi);
+		}
+		return danhSachXeHoi;
+   }
+   const cacLoaiXeHoi = inputArrayCars();
+   console.log(cacLoaiXeHoi);
+	</script>
+</body>
+</html>

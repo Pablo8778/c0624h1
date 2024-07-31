@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function createArray() {
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        let randomNumber = Math.floor(Math.random() * 100) + 1; // Sinh số nguyên dương ngẫu nhiên từ 1 đến 100
+        arr.push(randomNumber);
+    }
+    return arr;
+}
+
+// Khai báo mảng và gọi hàm createArray()
+let myArray = createArray();
+console.log(myArray);
+
+    </script>
+</body>
+</html>

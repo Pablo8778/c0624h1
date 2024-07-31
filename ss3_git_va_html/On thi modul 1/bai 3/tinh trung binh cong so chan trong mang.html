@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function avg(arr) {
+    let sum = 0;
+    let count = 0;
+  
+  //Sử dụng phương thức forEach để duyệt qua từng phần tử num trong mảng arr.
+    arr.forEach(num => {
+        
+    //Kiểm tra nếu num là số chẵn (num % 2 === 0)
+    //Nếu đúng, cộng giá trị của num vào sum (sum += num). và tăng count lên 1 đơn vị.
+       
+        if (num % 2 === 0) {
+            sum += num;
+            count++;
+        }
+    });
+
+   //Tính và trả về giá trị trung bình
+
+    if (count === 0) {
+        return 0; // Trường hợp mảng không chứa số chẵn
+    } else {
+        return sum / count;
+    }
+}
+
+// Sử dụng hàm
+let myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let average = avg(myArray);
+console.log(average);
+
+	</script>
+</body>
+</html>

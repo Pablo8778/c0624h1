@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function countGreenCars(cars) {
+			let count = 0;
+			for(i = 0; i < cars.length; i ++){
+				if(cars[i].color === "green"){
+					count++;
+				}
+			}
+			return count;
+		}
+		const car = [
+			{ name: "Xe A", autoMaker: "Toyota", color: "red" },
+            { name: "Xe B", autoMaker: "Honda", color: "green" },
+            { name: "Xe C", autoMaker: "Ford", color: "green" },
+            { name: "Xe D", autoMaker: "Chevrolet", color: "black" }
+			      ];
+		const carsgreen = countGreenCars(car);
+		console.log ("Số Xe Có Màu Xanh Lá Trong Kho Là:", carsgreen);
+	</script>
+</body>
+</html>

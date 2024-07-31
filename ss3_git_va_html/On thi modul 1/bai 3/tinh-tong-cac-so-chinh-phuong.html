@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//kiểm tra một số có phải là số chính phương hay không?
+		function isASquareNumbers(n) {
+		
+		return Math.sqrt(n) % 1 === 0;	
+		}
+
+		// Tính tổng các số chính phương trong mảng.
+		
+			function sumOfSquareNumbers(arr) {
+		    let sum = 0;
+
+		    arr.forEach(num => {
+		        if (isASquareNumbers(num)) {
+		            sum += num;
+		        }
+		    });
+
+		    return sum;
+		}
+
+		// Sử dụng hàm
+		let myArray = [1, 4, 9, 16, 25,];
+		
+		let result = sumOfSquareNumbers(myArray);
+		
+		console.log(result);
+
+	</script>
+</body>
+</html>

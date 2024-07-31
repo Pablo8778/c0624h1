@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập Mảng Số Nguyên</title>
+</head>
+<body>
+    <label for="numbers">Nhập các số nguyên, cách nhau bởi dấu phẩy:</label>
+    <input type="text" id="numbers" placeholder="Ví dụ: 1,2,3,4,5">
+    <button onclick="inputArrayNumber()">Nhập Mảng</button>
+
+    <script>
+        function inputArrayNumber() {
+    let input = document.getElementById('numbers').value;
+    let array = input.split(',').map(Number); // Tách chuỗi và chuyển đổi thành số nguyên
+    console.log(array);
+
+    // Bạn có thể thực hiện các thao tác khác với mảng ở đây
+}
+
+    </script>
+</body>
+</html>

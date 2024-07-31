@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let cars = [
+    {name: 'BMW', color: 'Red', capacity: 4},
+    {name: 'Audi', color: 'Green', capacity: 8},
+    {name: 'BMW', color: 'Blue', capacity: 6},
+    {name: 'Merc', color: 'Green', capacity: 4}
+];
+
+function filterBMW(arr) {
+    return arr.filter(car => car.name === 'BMW');
+}
+
+let bmwCars = filterBMW(cars);
+console.log(bmwCars);
+
+	</script>
+</body>
+</html>

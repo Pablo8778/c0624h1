@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function findMaxCapacity(cars) {
+			
+			if(cars.length === 0 ){
+				return null; // Nếu mảng rỗng, trả về null
+			}
+         
+         return cars.reduce((maxCar, currentCar) => {
+       	 
+       	 return currentCar.capacity > maxCar.capacity ? currentCar : maxCar;});
+	}	
+   
+   const cars = [
+    { name: "Xe A", autoMaker: "Toyota", color: "Đỏ", capacity: 5 },
+    { name: "Xe B", autoMaker: "Honda", color: "Xanh lá", capacity: 7 },
+    { name: "Xe C", autoMaker: "Ford", color: "Xanh lá", capacity: 4 },
+    { name: "Xe D", autoMaker: "Chevrolet", color: "Đen", capacity: 6 }
+    ];
+   
+   // Gọi hàm và in kết quả
+   
+    const maxCar = findMaxCapacity(cars);
+   
+    console.log(maxCar);
+   
+	</script>
+</body>
+</html>

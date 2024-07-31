@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function findMinPositiveNumbers(arr) {
+			// lọc các số nguyên dương từ mảng
+			const soNguyenDuong = arr.filter(num => num > 0);
+
+			// Tìm các số nguyên duong nhỏ nhất
+			const minValue = Math.min(...soNguyenDuong);
+
+			return minValue;
+		}
+		// Sử dụng hàm
+		const number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+		const giaTriSoNguyenDuong = findMinPositiveNumbers(number);
+		console.log (" Số nguyên dương nhỏ nhất là:", giaTriSoNguyenDuong);
+
+	</script>
+</body>
+</html>

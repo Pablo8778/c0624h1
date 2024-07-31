@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function xuatMangXeHoi(danhSachXeHoi) {
+			// Kiểm tra xem danh sách có trống không
+		if(!danhSachXeHoi || danhSachXeHoi ===0){
+			console.log('Danh Sách Xe Hơi Trống');
+			return;
+		}
+		// Duyệt qua từng đối tượng xe hơi trong danh sách
+		danhSachXeHoi.forEach((xeHoi, index) => {
+        console.log(`Xe hơi thứ ${index + 1}:`);
+        console.log(`Hãng sản xuất: ${xeHoi.hangSanXuat}`);
+        console.log(`Màu sắc: ${xeHoi.mauSac}`);
+        console.log(`Năm sản xuất: ${xeHoi.namSanXuat}`);
+        console.log(`Giá bán: ${xeHoi.giaBan}`);
+        console.log('--------------------------');
+    });
+	}
+		// Ví dụ sử dụng hàm xuất
+		let cacXeHoi = [
+		    {
+		        hangSanXuat: "Toyota",
+		        mauSac: "Đỏ",
+		        namSanXuat: 2020,
+		        giaBan: 30000
+		    },
+		    {
+		        hangSanXuat: "Honda",
+		        mauSac: "Xanh",
+		        namSanXuat: 2018,
+		        giaBan: 25000
+		    },
+		    {
+		        hangSanXuat: "Ford",
+		        mauSac: "Trắng",
+		        namSanXuat: 2019,
+		        giaBan: 27000
+		    }
+		];
+
+		xuatMangXeHoi(cacXeHoi);
+
+	</script>
+
+</body>
+</html>
