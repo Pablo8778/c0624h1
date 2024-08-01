@@ -12,7 +12,7 @@
 			if(cars.length === 0 ){
 				return null; // Nếu mảng rỗng, trả về null
 			}
-         
+         //reduce, sử dụng để giảm dần các phần tử của mảng thành một giá trị duy nhất. 
          return cars.reduce((maxCar, currentCar) => {
        	 
        	 return currentCar.capacity > maxCar.capacity ? currentCar : maxCar;});
