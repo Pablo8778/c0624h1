@@ -8,23 +8,16 @@
 <body>
 	<script type="text/javascript">
 		function sumPositiveEvenNumbers(arr) {
-	 
-	   return arr.reduce((sum, num) => {
-	   	
-	   	if (num > 0 && num % 2 ===0);{
-	   
-	   	return sum + num;
-
-	   	}
-
-	   	return sum;
-
-	 }, 0);
-	
+  // Lọc các số chẵn trong mảng
+  const soChan = arr.filter(num => num % 2 === 0);
+  
+  // Tính tổng các số chẵn
+  const tong = soChan.reduce((tong, num) => tong + num, 0);
+  
+  return tong;
 }
-	const number = [1,2,3,4,5,6,7,8,9];
-	const sum = sumPositiveEvenNumbers(number);
-	console.log(sum);
+	const arr = [1,2,3,4,5,6,7,8,9];
+	console.log(sumPositiveEvenNumbers(arr));
 	</script>
 </body>
 </html>
